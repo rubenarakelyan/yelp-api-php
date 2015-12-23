@@ -17,6 +17,13 @@
  */
 class YelpApi extends Stevenmaguire\Yelp\Client
 {
+    /**
+     * Build query string params using defaults
+     *
+     * @param  array $attributes
+     *
+     * @return string
+     */
     public function buildQueryParams($attributes = [])
     {
         $defaults = [
@@ -26,6 +33,21 @@ class YelpApi extends Stevenmaguire\Yelp\Client
         $attributes = array_merge($defaults, $attributes);
         
         return http_build_query($attributes);
+    }
+    
+    /**
+     * Query the Search API by a search term and location
+     *
+     * @param    array    $attributes   Query attributes
+     *
+     * @return   stdClass               The JSON response from the request
+     */
+    public function search($attributes = [])
+    {
+        $query_string = $this->buildQueryParams($attributes);
+        $searchPath = $this->searchPath . "?" . $query_string;
+        
+        return $this->request($searchPath);
     }
 }
 
