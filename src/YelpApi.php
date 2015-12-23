@@ -2,7 +2,7 @@
 
 // **********************************************************************
 // Yelp API PHP wrapper
-// Version 1.0.1
+// Version 1.0.2
 // Author: Ruben Arakelyan <ruben@ra.me.uk>
 //
 // Copyright (C) 2015 Ruben Arakelyan.
@@ -15,7 +15,7 @@
  * Class YelpApi
  * @package YelpApi
  */
-class YelpApi extends Stevenmaguire\Yelp\Client
+class YelpApi extends \Stevenmaguire\Yelp\Client
 {
     /**
      * Build query string params using defaults
@@ -33,21 +33,6 @@ class YelpApi extends Stevenmaguire\Yelp\Client
         $attributes = array_merge($defaults, $attributes);
         
         return http_build_query($attributes);
-    }
-    
-    /**
-     * Query the Search API by a search term and location
-     *
-     * @param    array    $attributes   Query attributes
-     *
-     * @return   stdClass               The JSON response from the request
-     */
-    public function search($attributes = [])
-    {
-        $query_string = $this->buildQueryParams($attributes);
-        $searchPath = $this->searchPath . "?" . $query_string;
-        
-        return $this->request($searchPath);
     }
 }
 
