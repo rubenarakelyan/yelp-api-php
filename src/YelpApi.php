@@ -2,7 +2,7 @@
 
 // **********************************************************************
 // Yelp API PHP wrapper
-// Version 1.0.0
+// Version 1.0.1
 // Author: Ruben Arakelyan <ruben@ra.me.uk>
 //
 // Copyright (C) 2015 Ruben Arakelyan.
