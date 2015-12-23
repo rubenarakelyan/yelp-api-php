@@ -1,0 +1,29 @@
+{
+  "name": "rubenarakelyan/yelp-api-php",
+  "description": "PHP wrapper for the Yelp API.",
+  "homepage": "https://github.com/rubenarakelyan/yelp-api-php",
+  "authors": [
+    {
+      "name": "Ruben Arakelyan",
+      "email": "ruben@ra.me.uk",
+      "homepage": "http://ra.me.uk/",
+      "role": "Developer"
+    }
+  ],
+  "keywords": [
+    "api",
+    "yelp",
+    "php"
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "stevenmaguire/yelp-php": "1.4.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "RubenArakelyan\\YelpApi\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "minimum-stability": "stable"
+}
