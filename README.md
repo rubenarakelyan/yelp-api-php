@@ -1,21 +1,37 @@
-# zomato-api-php
+# yelp-api-php
 
-PHP wrapper for the Yelp API.
+This package provides a PHP wrapper for the Yelp API.
 
 This wrapper is a simple extension to https://github.com/stevenmaguire/yelp-php
-that removes the default term and location attributes whicn prevent searching by
+that removes the default term and location attributes which prevent searching by
 latitude/longitude.
 
-## Support
+### Requirements
 
-Please submit issues to https://github.com/rubenarakelyan/yelp-api-php/issues.
+- PHP 5.5
 
-## Contributing
+### Installation
 
-All pull requests are gratefully accepted.
+**Composer**
 
-## Licence
+Run the following to include this via Composer
 
-All files in this repository are licenced under the MIT licence.
+```shell
+composer require rubenarakelyan/yelp-api-php
+```
 
-Please note that data pulled by the API is licenced separately.
+### Contribution Guidelines
+
+When contributing please consider the following guidelines:
+
+- Please conform to the code style of the project.
+- All methods and classes must contain docblocks.
+- When planning a pull request to add new functionality, it may be wise to [submit a proposal](https://github.com/rubenarakelyan/yelp-api-php/issues/new) to ensure compatibility with the project's goals.
+
+### Maintainer
+
+This package is maintained by [Ruben Arakelyan](https://ruben.am/).
+
+### License
+
+This package is licensed under the [MIT license](https://github.com/rubenarakelyan/yelp-api-php/blob/master/LICENSE).
